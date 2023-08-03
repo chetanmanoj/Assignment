@@ -9,6 +9,12 @@ import twitch from './twitch.svg'
 import x from './twitter.svg'
 import insta from './insta.svg'
 
+import bigCube from './bigCube.png'
+import iphone from './iphone.png'
+import pillar from './pillar.png'
+import smollCube from './smollCube.png'
+import stairs from './stairs.png'
+
 export{
     dollar,
     eye,
@@ -18,4 +24,9 @@ export{
     twitch,
     x,
     insta,
+    bigCube,
+    iphone,
+    pillar,
+    smollCube,
+    stairs,
 }
