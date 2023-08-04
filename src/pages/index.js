@@ -1,6 +1,9 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 import {
+  list,
   lines,
   dollar,
   eye,
@@ -17,7 +20,74 @@ import {
   stairs,
 } from "../../public/assets";
 
+
+
 export default function Home() {
+  const [menu, setMenu] = useState(false)
+  
+  const isMobile = useMediaQuery({
+    query: '(max-width: 900px)'
+  })
+  const [hideOnMobile, setHideOnMobile] = useState(false);
+useEffect(() => {
+  setHideOnMobile(isMobile);
+}, [isMobile]);
+
+  function toggleMenu(){
+    setMenu(!menu)
+    console.log(menu)
+    if(menu){
+      console.log('hi')
+      return(
+        <div>
+        <span>
+          hi
+        </span>
+        </div>
+      )
+    }
+  }
+
+  if(hideOnMobile){
+    return(
+      <div className="flex flex-col items-center justify-center min-h-screen overflow-y-scroll">
+        <Image src={lines} alt="no" className="-z-40 absolute h-full object-fill"/>
+        <div className="flex flex-row justify-center h-[5rem] bg-slate-800 w-full">
+        <Image src={dollar} alt="No moni" className="flex self-start"/>
+        <button onClick={toggleMenu} className="flex self-end">
+          hey
+        </button>
+        </div>
+        <div className="flex flex-auto flex-col items-center justify-center font-extrabold tracing-[0.03125rem] h-[28.9rem] text-[7.8rem]">
+        <span className="leading-[10.375rem] h-[5.7rem] text-center -z-20">CASH <br/></span> <span className="-z-0"> APP</span>
+        <Image src={iphone} alt="No iPhone" className="absolute -z-10"/>
+        </div>
+        {/* <div className="flex flex-row gap-[1.88rem]">
+          <Image src={twitch} alt="No twitch" />
+          <Image src={x} alt="No twitter" />
+          <Image src={insta} alt="No insta" />
+        </div> */}
+        <div className="flex flex-row gap-[1.25rem] mb-[2rem]">
+        <div className="flex flex-row items-center bg-black justify-between p-[1.5625rem] border-[1px] border-solid border-white w-[9.625rem] h-[3.125rem] rounded-[0.4375rem]">
+          <Image src={apple} alt="No apple" />
+          <span className="text-[0.75rem] tracking-[0.03125rem]">
+            APP STORE
+          </span>
+        </div>
+        <div className="flex flex-row items-center bg-black justify-between p-[0.75rem] border-[1px] border-solid border-white w-[9.625rem] h-[3.125rem] rounded-[0.4375rem]">
+          <Image src={gplay} alt="No google" />
+          <span className="text-[0.75rem] tracking-[0.03125rem]">
+            GOOGLE PLAY
+          </span>
+        </div>
+        </div>
+        <Image src={down} alt="No arrow" className="mb-[1rem]"/>
+        
+      </div>
+    )
+  }
+
+  else{
   return (
     <main
       className="flex flex-col bg-main text-og min-h-screen items-center"
@@ -28,7 +98,7 @@ export default function Home() {
       {/* BG ITEMS  */}
       <Image src={smollCube} alt="No moni" className="absolute left-[12rem] top-[4.0rem]" />
       <Image src={bigCube} alt="No moni" className="absolute left-[10rem] -z-10 bottom-[5.25rem]" />
-      <Image src={stairs} alt="No moni" className="absolute top-[3rem] right-[11.19rem]" />
+      <Image src={stairs} alt="No moni" className="absolute top-[3rem] right-[11.19rem] -z-50" />
       <Image src={pillar} alt="No moni" className="absolute bottom-0 -z-10 right-[19.1rem]" />
 
       {/* HEADER */}
@@ -45,7 +115,7 @@ export default function Home() {
           <span>STATUS</span>
           <span>CODEBLOG</span>
         </div>
-        <Image src={eye} alt="No moni" />
+        <Image src={eye} alt="No eye" />
       </div>
 
       {/* HERO  */}
@@ -90,4 +160,5 @@ export default function Home() {
       </div>
     </main>
   );
+  }
 }

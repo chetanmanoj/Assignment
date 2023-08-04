@@ -1,3 +1,5 @@
+import list from './list.svg'
+
 import lines from './lines.png'
 import dollar from './cashapp/logo.svg'
 import eye from './eye.svg'
@@ -16,6 +18,7 @@ import smollCube from './smollCube.png'
 import stairs from './stairs.png'
 
 export{
+    list,
     lines,
     dollar,
     eye,
