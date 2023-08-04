@@ -26,7 +26,7 @@ export default function Home() {
       <Image src={lines} alt="no" className="-z-40 absolute h-full w-full"/>
 
       {/* BG ITEMS  */}
-      <Image src={smollCube} alt="No moni" className="absolute right-[69.5rem] bottom-[34.43rem]" />
+      <Image src={smollCube} alt="No moni" className="absolute left-[12rem] top-[4.0rem]" />
       <Image src={bigCube} alt="No moni" className="absolute left-[10rem] -z-10 bottom-[5.25rem]" />
       <Image src={stairs} alt="No moni" className="absolute top-[3rem] right-[11.19rem]" />
       <Image src={pillar} alt="No moni" className="absolute bottom-0 -z-10 right-[19.1rem]" />
@@ -56,6 +56,7 @@ export default function Home() {
 
         {/* FOOTER  */}
       <div className="flex flex-row flex-auto h-[5.5rem] items-center justify-between px-[3.75rem] w-full">
+        <div className="flex flex-row gap-[1.25rem]">
         <div className="flex flex-row items-center bg-black justify-between p-[1.5625rem] border-[1px] border-solid border-white w-[10.625rem] h-[3.125rem] rounded-[0.4375rem]">
           <Image src={apple} alt="No apple" />
           <span className="text-[0.75rem] tracking-[0.03125rem]">
@@ -68,8 +69,11 @@ export default function Home() {
             GOOGLE PLAY
           </span>
         </div>
-        <Image src={down} alt="No arrow" />
-        <p className="w-[23.6875rem] text-[0.625rem] font-bold text-[#B6B6B6] leading-[0.8125rem]">
+        </div>
+        
+        <div className="flex flex-row">
+        <Image src={down} alt="No arrow" className="mr-[5.44rem]"/>
+        <p className="w-[23.6875rem] text-[0.625rem] font-bold text-[#B6B6B6] leading-[0.8125rem] mr-[2.2rem]">
           Brokerage services by Cash App Investing LLC, member FINRA / SIPC. See
           our BrokerCheck. Investing involves risk; you may lose money. Bitcoin
           trading offered by Cash App. Cash App Investing does not trade bitcoin
@@ -81,6 +85,7 @@ export default function Home() {
           <Image src={twitch} alt="No twitch" />
           <Image src={x} alt="No twitter" />
           <Image src={insta} alt="No insta" />
+        </div>
         </div>
       </div>
     </main>
