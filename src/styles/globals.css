@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Yantramanav:wght@900&display=swap');
+
 @font-face {
   font-family: Agrandir;
-  src: url("/public/fonts/Agrandir.otf")
+  src: local("/public/fonts/Agrandir.otf")
 }
 
 :root {

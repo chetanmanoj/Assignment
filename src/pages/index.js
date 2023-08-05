@@ -50,13 +50,31 @@ useEffect(() => {
 
   if(hideOnMobile){
     return(
-      <div className="flex flex-col items-center justify-center min-h-screen overflow-y-scroll">
+      <div className="flex flex-col font-og items-center justify-center min-h-screen overflow-y-scroll">
         <Image src={lines} alt="no" className="-z-40 absolute h-full object-fill"/>
-        <div className="flex flex-row justify-center h-[5rem] bg-slate-800 w-full">
-        <Image src={dollar} alt="No moni" className="flex self-start"/>
-        <button onClick={toggleMenu} className="flex self-end">
-          hey
-        </button>
+        <div className="flex flex-row justify-between px-6 items-center  h-[5rem] bg-stone-950 w-full">
+        <Image src={dollar} alt="No moni" />
+        <div  onClick={toggleMenu} className="h-1/2" >
+          
+          {menu ? <div className="felx flex-col items-center text-center justify-center">
+            {/* <Image src={list} alt='no'/> */}
+            <span className="text-center">X</span>
+            <div className="flex flex-col bg-stone-950 mt-[2rem] w-full z-50 h-[10rem] overflow-y-scroll gap-4">
+              <span className="border-b-[1px] border-white mx-4 py-2">SIGN IN</span>
+              <span className="border-b-[1px] border-white mx-4 py-2">LEGAL</span>
+              <span className="border-b-[1px] border-white mx-4 py-2">LICENSE</span>
+              <span className="border-b-[1px] border-white mx-4 py-2">SECURITY</span>
+              <span className="border-b-[1px] border-white mx-4 py-2">CAREERS</span>
+              <span className="border-b-[1px] border-white mx-4 py-2">PRESS</span>
+              <span className="border-b-[1px] border-white mx-4 py-2">SUPPORT</span>
+              <span className="border-b-[1px] border-white mx-4 py-2">STATUS</span>
+              <span>CODEBLOG</span>
+
+            </div>
+          </div> : <div>
+            <Image src={list} alt='no'/>
+          </div>}
+        </div>
         </div>
         <div className="flex flex-auto flex-col items-center justify-center font-extrabold tracing-[0.03125rem] h-[28.9rem] text-[7.8rem]">
         <span className="leading-[10.375rem] h-[5.7rem] text-center -z-20">CASH <br/></span> <span className="-z-0"> APP</span>
@@ -90,7 +108,7 @@ useEffect(() => {
   else{
   return (
     <main
-      className="flex flex-col bg-main text-og min-h-screen items-center"
+      className="flex flex-col bg-main font-og min-h-screen items-center"
     >
       {/* BG IMAGE  */}
       <Image src={lines} alt="no" className="-z-40 absolute h-full w-full"/>
@@ -119,9 +137,9 @@ useEffect(() => {
       </div>
 
       {/* HERO  */}
-      <div className="flex flex-auto flex-col items-center justify-center font-extrabold tracing-[0.03125rem] h-[28.9rem] text-[12.0625rem]">
-        <span className="leading-[10.375rem] h-[5.7rem] text-center -z-20">CASH <br/></span> <span className="-z-0"> APP</span>
-        <Image src={iphone} alt="No iPhone" className="absolute -z-10"/>
+      <div className="flex flex-auto mt-[2rem] flex-col items-center justify-center font-extrabold tracing-[0.03125rem] h-[28.9rem] text-[15.0625rem] pt-[10rem]">
+        <span className="leading-[10.375rem] h-[5.7rem]  text-center -z-20">CASH <br/></span> <span className="-z-0"> APP</span>
+        <Image src={iphone} alt="No iPhone" className="absolute top-[9.5rem] -z-10"/>
         </div>
 
         {/* FOOTER  */}
@@ -143,7 +161,7 @@ useEffect(() => {
         
         <div className="flex flex-row">
         <Image src={down} alt="No arrow" className="mr-[5.44rem]"/>
-        <p className="w-[23.6875rem] text-[0.625rem] font-bold text-[#B6B6B6] leading-[0.8125rem] mr-[2.2rem]">
+        <p className="w-[23.6875rem] text-[0.625rem] font-bold text-[#B6B6B6] font-odd-one leading-[0.8125rem] mr-[2.2rem]">
           Brokerage services by Cash App Investing LLC, member FINRA / SIPC. See
           our BrokerCheck. Investing involves risk; you may lose money. Bitcoin
           trading offered by Cash App. Cash App Investing does not trade bitcoin

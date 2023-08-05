@@ -8,7 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'og':['Agrandir'],
+        // 'og':['Agrandir'],
+        'og':['Yantramanav', 'sans-serif'],
+        'odd-one':['Mulish', 'sans-serif']
+
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
