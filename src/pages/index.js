@@ -35,16 +35,9 @@ useEffect(() => {
 
   function toggleMenu(){
     setMenu(!menu)
-    console.log(menu)
+    // console.log(menu)
     if(menu){
-      console.log('hi')
-      return(
-        <div>
-        <span>
-          hi
-        </span>
-        </div>
-      )
+      return 0
     }
   }
 
